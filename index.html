@@ -1,0 +1,86 @@
+  <body>
+    <div class="container">
+      <h1>Welcome <span id="name"></span></h1>
+
+      <hr/>
+        <h2>How many reindeers pull Santa's sleigh?</h2>
+
+        <ol id="reindeers">
+          <li>Dasher</li>
+          <li>Dancer</li>
+          <li>Prancer</li>
+          <li>Vixen</li>
+          <li>Comet</li>
+          <li>Cupid</li>
+          <li>Donner</li>
+          <li>Blitzen</li>
+          <li>and Rudolph!</li>
+          <li id="reindeer-correct">That's correct: it's nine!</li>
+        </ol>
+
+      <hr />
+      <div id="quiz-container">
+        <h2>Nine timestable Christmas quiz!</h2>
+        <p id="reindeer-emojis">🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌🦌</p>
+        <h2>Santa's Challenge:</h2>
+
+        <!-- TIMER SECTION -->
+        <p>Set your timer and see if you can complete the quiz within that time!</p>
+        <div class="timer-container">
+          <div>
+            <input id="input" type="number" placeholder="Countdown Timer">
+            <button id="btn">Start!</button>
+          </div>
+          <div id="timer">...</div>
+        </div>
+        <hr />
+        <!-- END OF TIMER SECTION -->
+
+        <!-- START OF THE QUIZ  -->
+        <form id="quiz-form">
+          <div class="question">
+            <p class="question-label">1. What is 9 x 1?</p>
+            <label> <input type="radio" name="q1" value="a" /> a) 9 </label>
+            <label> <input type="radio" name="q1" value="b" /> b) 5 </label>
+            <label> <input type="radio" name="q1" value="c" /> c) 6 </label>
+          </div>
+
+          <div class="question">
+            <p class="question-label">2. What is 9 x 9?</p>
+            <label> <input type="radio" name="q2" value="a" /> a) 27 </label>
+            <label> <input type="radio" name="q2" value="b" /> b) 81 </label>
+            <label> <input type="radio" name="q2" value="c" /> c) 99 </label>
+          </div>
+
+          <div class="question">
+            <p class="question-label">3. What is 9 x 2?</p>
+            <label> <input type="radio" name="q3" value="a" /> a) 7 </label>
+            <label> <input type="radio" name="q3" value="b" /> b) 9 </label>
+            <label> <input type="radio" name="q3" value="c" /> c) 18 </label>
+          </div>
+          <button type="button" onclick="checkAnswers()">Submit</button>
+        </form>
+      </div>
+      <!-- RESULTS ARE DISPLAYED  -->
+      <h2 id="result-heading">Here are your final results:</h2>
+      <!--HIDE THIS - Add to the code for revealing the results -->
+      <div id="result-container"></div>
+      <hr />
+
+      <!-- END OF THE QUIZ  -->
+
+      <!-- REINDEER NAME GENERATOR SECTION  -->
+      <div class="elf-container">
+        <button onclick="generateElfName()">
+            <b>Click here for your fancy elf name!</b>
+        </button>
+        <ul id="generateElfName">
+          <!-- Generated elfname content will be displayed here   -->
+        </ul>
+        
+      </div>
+    </div>
+    <!-- END OF ELF NAME GENERATOR -->
+    <script src="script.js"></script>
+
+  </body>
